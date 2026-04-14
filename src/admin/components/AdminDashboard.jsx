@@ -17,7 +17,7 @@ function AdminDashboard(){
 
     const fetchDashboardData = async () => {
         try {
-        const res = await fetch("http://localhost:8080/api/dashboard");
+        const res = await fetch("https://ecomerceback-0mx1.onrender.com/api/dashboard");
         const data= await res.json();
         console.log(data);
         setUsers(data.users);
