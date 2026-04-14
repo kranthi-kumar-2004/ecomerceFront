@@ -19,7 +19,7 @@ function Home() {
     ];
 
     useEffect(() => {
-        fetch("http://localhost:8080/products/")
+        fetch("https://ecomerceback-0mx1.onrender.com/products/")
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
