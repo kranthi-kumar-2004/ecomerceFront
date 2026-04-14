@@ -13,7 +13,7 @@ function Register({close,openLogin}) {
  const handleRegister = (e) => {
   e.preventDefault();
 
-  fetch("http://localhost:8080/auth/register", {
+  fetch("https://ecomerceback-0mx1.onrender.com/auth/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
