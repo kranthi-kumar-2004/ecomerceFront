@@ -41,7 +41,7 @@ function Header() {
 
       <div className="menu-bar" ref={menuRef}>
         <a href="/">Home</a>
-        <a href="/cart">Cart</a>
+        <Link to="/cart">Cart</Link>
         
         <FaBars
           className="menu"
