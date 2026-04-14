@@ -1,0 +1,154 @@
+.display-content{
+    display:flex;
+    flex-direction:row;
+    gap:40px;
+    margin-left:60px;
+    margin-right:30px;
+}
+.dash h2{
+    margin-left:63px;
+}
+.dash{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+.box h5{
+    font-weight: normal;
+    color:gray;
+}
+.inbox{
+    margin-right:auto;
+}
+.icon-users{
+    color:purple;
+    font-size:30px;
+}
+.icon-products{
+    color:green;
+    font-size: 30px;
+}
+.icon-orders{
+    color:blue;
+    font-size: 30px;
+}
+.icon-revenue{
+    color:rgb(200, 138, 3);
+    font-size: 35px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    border-radius:9px;
+    padding:20px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgb(0,0,0,0.2);
+    width:30%;
+}
+
+input{
+    outline:none;
+    border:none;
+    width:10px;
+    font-size:18px;
+}
+
+
+
+.RQ{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    padding:59px;
+}
+.Recent{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    padding:40px;
+    gap:20px;
+    border-radius:9px;
+    box-shadow: 0 4px 10px rgb(0,0,0,0.2);
+
+}
+.Quick{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:50%;
+    padding:40px;
+    box-shadow: 0 4px 10px rgb(0,0,0,0.2);
+    border-radius:9px;
+    flex-shrink:0;
+}
+.Quick a{
+    text-align:center;
+    width:100%;
+    border:none;
+    border-radius:9px;
+    background:#e1e5f2;
+    color:black;
+    cursor:pointer;
+    padding:10px;
+    text-decoration:none;
+}
+.Quick a:hover{
+    background:#426eef;
+    color:white;
+}
+.Recent button{
+    width:100%;
+    border:none;
+    border-radius:9px;
+    background:#e1e5f2;
+    cursor:pointer;
+    padding:10px;
+}
+@media (max-width:668px){
+
+    .display-content{
+        flex-direction:column;
+        margin-left:20px;
+        margin-right: 10px;
+        gap:20px;
+    }
+
+    .dash h2{
+        margin-left:20px;
+    }
+
+    .box{
+        width:90%;
+        padding:15px;
+    }
+
+    .RQ{
+        flex-direction:column;
+        padding:20px;
+    }
+    .Recent{
+        width:90%;
+        padding:20px;
+    }
+
+    .Quick{
+        width:90%;
+        padding:20px;
+    }
+    .Quick a{
+    text-align:center;
+    width:90%;
+    border:none;
+    border-radius:9px;
+    background:#e1e5f2;
+    color:black;
+    cursor:pointer;
+    padding:10px;
+    text-decoration:none;
+}
+    .manage-p{
+        color:white;
+    }
+
+}

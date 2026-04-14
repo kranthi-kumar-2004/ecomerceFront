@@ -1,0 +1,220 @@
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-lay {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.card-rec {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card-rec::-webkit-scrollbar {
+  display: none;
+}
+
+.card-reco {
+  min-width: 220px;
+  max-width: 220px;
+  box-shadow: 0 4px 10px rgb(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.card-reco img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🔥 Banner Fix */
+.banner-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.banner-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.banner-slide {
+  min-width: 100%;
+  height: 300px;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.category-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.category-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.category-box h3 {
+  margin-bottom: 10px;
+}
+
+.category-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-box p {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.category-grid img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: none;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
+}
+
+/* 🔥 Product auto slider FIX */
+.slider-full {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+  animation: autoScroll 60s linear infinite;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.slider-item {
+  min-width: 180px;
+  max-width: 180px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.img-box {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+/* 🔥 Cards */
+.card {
+  box-shadow: 0 4px 10px rgb(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.recommend h4 {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+/* 🔥 Mobile Fix */
+@media (max-width: 768px) {
+  .card-lay {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .banner-slide {
+    height: 180px;
+  }
+
+  .card-reco {
+    min-width: 160px;
+  }
+}
