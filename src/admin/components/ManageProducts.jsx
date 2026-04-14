@@ -20,7 +20,7 @@ function ManageProducts() {
     const fetchProducts = async () => {
         try {
             setLoading(true);
-            const res = await fetch("http://localhost:8080/products/");
+            const res = await fetch("https://ecomerceback-0mx1.onrender.com/products/");
             const data = await res.json();
             setProducts(data);
         } catch (err) {
@@ -41,13 +41,13 @@ function ManageProducts() {
     const saveProduct = async () => {
         try {
             if (editId !== null) {
-                await fetch(`http://localhost:8080/products/${editId}`, {
+                await fetch(`https://ecomerceback-0mx1.onrender.com/products/${editId}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(form)
                 });
             } else {
-                await fetch("http://localhost:8080/products/", {
+                await fetch("https://ecomerceback-0mx1.onrender.com/products/", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(form)
@@ -66,7 +66,7 @@ function ManageProducts() {
         if (!window.confirm("Are you sure to delete this product?")) return;
 
         try {
-            await fetch(`http://localhost:8080/products/${id}`, {
+            await fetch(`https://ecomerceback-0mx1.onrender.com/products/${id}`, {
                 method: "DELETE"
             });
             fetchProducts();
