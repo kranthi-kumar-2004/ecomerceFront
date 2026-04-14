@@ -28,7 +28,7 @@ function ProductPage() {
       try {
         setLoading(true);
 
-        const res = await fetch(`http://localhost:8080/products/${id}`);
+        const res = await fetch(`https://ecomerceback-0mx1.onrender.com/products/${id}`);
         if (!res.ok) throw new Error("Failed to fetch product");
 
         const data = await res.json();
@@ -61,7 +61,7 @@ function ProductPage() {
 
     console.log("FINAL ID SENT:", finalId);
 
-    const res = await fetch("http://localhost:8080/api/cart", {
+    const res = await fetch("https://ecomerceback-0mx1.onrender.com/api/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
