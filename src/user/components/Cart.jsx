@@ -14,7 +14,7 @@ function Cart() {
       return;
     }
 
-    fetch("http://localhost:8080/api/cart", {
+    fetch("https://ecomerceback-0mx1.onrender.com/api/cart", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -27,7 +27,7 @@ function Cart() {
         const updated = await Promise.all(
           data.map(async (it) => {
             const res = await fetch(
-              `http://localhost:8080/products/${it.productId}`
+              `https://ecomerceback-0mx1.onrender.com/products/${it.productId}`
             );
             if (!res.ok) return it;
 
