@@ -20,7 +20,7 @@ function Login({ close ,openRegister}) {
   const handleLogin = (e) => {
   e.preventDefault();
 
-  fetch("http://localhost:8080/auth/login", {
+  fetch("https://ecomerceback-0mx1.onrender.com/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
