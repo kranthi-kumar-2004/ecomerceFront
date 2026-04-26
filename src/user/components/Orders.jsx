@@ -67,7 +67,7 @@ function Orders() {
   }, [location.state]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/checkout/my-orders", {
+    fetch("https://ecomerceback-0mx1.onrender.com/api/checkout/my-orders", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
