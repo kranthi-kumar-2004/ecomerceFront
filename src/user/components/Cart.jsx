@@ -15,7 +15,7 @@ function Cart() {
       return;
     }
 
-    fetch("http://localhost:8080/api/cart", {
+    fetch("https://ecomerceback-0mx1.onrender.com/api/cart", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -28,7 +28,7 @@ function Cart() {
         const updated = await Promise.all(
           data.map(async (it) => {
             const res = await fetch(
-              `http://localhost:8080/products/${it.productId}`
+              `https://ecomerceback-0mx1.onrender.com/products/${it.productId}`
             );
             if (!res.ok) return it;
 
@@ -54,7 +54,7 @@ function Cart() {
   const qty = (it, t) => {
     const q = t === "inc" ? it.quantity + 1 : Math.max(1, it.quantity - 1);
 
-    fetch("http://localhost:8080/api/cart", {
+    fetch("https://ecomerceback-0mx1.onrender.com/api/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ function Cart() {
   };
 
   const del = (it) => {
-    fetch(`http://localhost:8080/api/cart/${it.productId}`, {
+    fetch(`https://ecomerceback-0mx1.onrender.com/api/cart/${it.productId}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     }).then(() => {
