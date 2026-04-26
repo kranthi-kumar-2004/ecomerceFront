@@ -9,7 +9,7 @@ function Profile() {
 
   useEffect(() => {
     // 🔥 Fetch USER DATA
-    fetch("http://localhost:8080/api/user/profile", {
+    fetch("https://ecomerceback-0mx1.onrender.com/api/user/profile", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -19,7 +19,7 @@ function Profile() {
       .catch(err => console.error(err));
 
     // 🔥 Fetch ADDRESSES
-    fetch("http://localhost:8080/api/checkout/address", {
+    fetch("https://ecomerceback-0mx1.onrender.com/api/checkout/address", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
