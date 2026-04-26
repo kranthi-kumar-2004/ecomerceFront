@@ -20,7 +20,7 @@ function Login({ close ,openRegister}) {
   const handleLogin = (e) => {
   e.preventDefault();
 
-  fetch("https://ecomerceback-0mx1.onrender.com/auth/login", {
+  fetch("http://localhost:8080/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -65,7 +65,7 @@ function Login({ close ,openRegister}) {
 
         <input
           type="text"
-          placeholder="Username"
+          placeholder="Email"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
