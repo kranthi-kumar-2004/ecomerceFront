@@ -52,7 +52,7 @@ function Register({ close, openLogin }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
     name: name,
-    username: email,   // ✅ important
+    email: email,   // ✅ important
     password: password
   }),
     })
