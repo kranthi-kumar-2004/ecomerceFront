@@ -19,7 +19,7 @@ function Home() {
     ];
 
     useEffect(() => {
-        fetch("https://ecomerceback-0mx1.onrender.com/products/")
+        fetch("http://localhost:8080/products/")
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -32,15 +32,15 @@ function Home() {
     }, []);
     const [randomProducts, setRandomProducts] = useState([]);
 
-useEffect(() => {
-    if (products.length > 0) {
-        const shuffled = [...products]
-            .sort(() => Math.random() - 0.5)
-            .slice(0, 10);
+    useEffect(() => {
+        if (products.length > 0) {
+            const shuffled = [...products]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 10);
 
-        setRandomProducts(shuffled);
-    }
-}, [products]);
+            setRandomProducts(shuffled);
+        }
+    }, [products]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -50,7 +50,6 @@ useEffect(() => {
         return () => clearInterval(interval);
     }, []);
 
-    // 🔥 GROUP BY CATEGORY
     const categoryMap = {};
     products.forEach(p => {
         if (!categoryMap[p.category]) {
@@ -121,23 +120,21 @@ useEffect(() => {
                     </div>
 
                     <div className="recommend">
-    <h4>Recommend Products</h4>
-    <div className="card-rec">
-        {randomProducts.map((p) => (
-            <div
-                key={p.id}
-                onClick={() => navigate(`/product/${p.id}`)}
-                className="card-reco"
-            >
-                <img src={p.image} alt={p.name} />
-                <h4>{p.name}</h4>
-                <p>₹{p.price}</p>
-            </div>
-        ))}
-    </div>
-</div>
-
-                    {/* 🔥 GRID */}
+                        <h4>Recommend Products</h4>
+                        <div className="card-rec">
+                            {randomProducts.map((p) => (
+                                <div
+                                    key={p.id}
+                                    onClick={() => navigate(`/product/${p.id}`)}
+                                    className="card-reco"
+                                >
+                                    <img src={p.image} alt={p.name} />
+                                    <h4>{p.name}</h4>
+                                    <p>₹{p.price}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                     <div className="card-lay">
                         {products.map((p) => (
                             <div
