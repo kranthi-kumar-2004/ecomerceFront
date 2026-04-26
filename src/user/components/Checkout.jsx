@@ -59,7 +59,7 @@ const Checkout = () => {
     // ✅ IF BUY NOW (state exists)
     if (buyNowData && buyNowData.productId) {
 
-      fetch(`http://localhost:8080/products/${buyNowData.productId}`)
+      fetch(`https://ecomerceback-0mx1.onrender.com/products/${buyNowData.productId}`)
         .then(res => res.json())
         .then(product => {
           setCart({
@@ -75,14 +75,14 @@ const Checkout = () => {
     } else {
       // ✅ NORMAL CART FLOW
 
-      fetch("http://localhost:8080/api/cart", {
+      fetch("https://ecomerceback-0mx1.onrender.com/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then(res => res.json())
         .then(async (data) => {
           const updated = await Promise.all(
             data.map(async (it) => {
-              const res = await fetch(`http://localhost:8080/products/${it.productId}`);
+              const res = await fetch(`https://ecomerceback-0mx1.onrender.com/products/${it.productId}`);
               const p = await res.json();
 
               return {
@@ -99,7 +99,7 @@ const Checkout = () => {
     }
 
     // ✅ ADDRESS LOAD (same for both)
-    fetch("http://localhost:8080/api/checkout/address", {
+    fetch("https://ecomerceback-0mx1.onrender.com/api/checkout/address", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
@@ -141,7 +141,7 @@ const Checkout = () => {
   }
 
   try {
-    await fetch("http://localhost:8080/api/checkout/address", {
+    await fetch("https://ecomerceback-0mx1.onrender.com/api/checkout/address", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -173,7 +173,7 @@ const Checkout = () => {
         return;
       }
 
-      const orderRes = await fetch("http://localhost:8080/api/checkout/payment/create-order", {
+      const orderRes = await fetch("https://ecomerceback-0mx1.onrender.com/api/checkout/payment/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -200,7 +200,7 @@ const Checkout = () => {
         handler: async function (response) {
           try {
             // 🔐 STEP 1: Verify payment
-            const verifyRes = await fetch("http://localhost:8080/api/checkout/payment/verify", {
+            const verifyRes = await fetch("https://ecomerceback-0mx1.onrender.com/api/checkout/payment/verify", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
@@ -216,7 +216,7 @@ const Checkout = () => {
             }
 
             // ✅ STEP 2: Place order AFTER verification
-            await fetch("http://localhost:8080/api/checkout/order", {
+            await fetch("https://ecomerceback-0mx1.onrender.com/api/checkout/order", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -235,7 +235,7 @@ const Checkout = () => {
             });
 
             // ✅ STEP 3: Clear cart
-            await fetch("http://localhost:8080/api/cart/clear", {
+            await fetch("https://ecomerceback-0mx1.onrender.com/api/cart/clear", {
               method: "DELETE",
               headers: { Authorization: `Bearer ${token}` },
             });
