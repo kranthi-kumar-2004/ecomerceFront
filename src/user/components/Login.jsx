@@ -5,7 +5,7 @@ import "./css/Login.css";
 
 function Login({ close ,openRegister}) {
   
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -25,7 +25,7 @@ function Login({ close ,openRegister}) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ email, password }),
   })
     .then((res) => {
       if (!res.ok) {
@@ -46,7 +46,7 @@ function Login({ close ,openRegister}) {
       }, 1000); 
     })
     .catch(() => {
-      setError("Invalid username or password");
+      setError("Invalid email or password");
       setSuccess("");
     });
 };
@@ -66,8 +66,8 @@ function Login({ close ,openRegister}) {
         <input
           type="text"
           placeholder="Email"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
 
