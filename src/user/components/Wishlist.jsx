@@ -15,7 +15,7 @@ const Wishlist = () => {
       return;
     }
     console.log(token);
-    fetch("http://localhost:8080/wishlist", {
+    fetch("https://ecomerceback-0mx1.onrender.com/wishlist", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ const Wishlist = () => {
 
   try {
     const response = await fetch(
-      `http://localhost:8080/wishlist/remove/${productId}`,
+      `https://ecomerceback-0mx1.onrender.com/wishlist/remove/${productId}`,
       {
         method: "DELETE",
         headers: {
