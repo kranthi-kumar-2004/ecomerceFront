@@ -1,6 +1,7 @@
 import "./css/Cart.css";
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const [items, setItems] = useState([]);
@@ -14,7 +15,7 @@ function Cart() {
       return;
     }
 
-    fetch("https://ecomerceback-0mx1.onrender.com/api/cart", {
+    fetch("http://localhost:8080/api/cart", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -27,7 +28,7 @@ function Cart() {
         const updated = await Promise.all(
           data.map(async (it) => {
             const res = await fetch(
-              `https://ecomerceback-0mx1.onrender.com/products/${it.productId}`
+              `http://localhost:8080/products/${it.productId}`
             );
             if (!res.ok) return it;
 
@@ -124,29 +125,31 @@ function Cart() {
             ))}
           </div>
 
-          <div className="sm">
-            <h2>Order Summary</h2>
+         <div className="sm">
+  <h2>Order Summary</h2>
 
-            <div className="rw">
-              <span>Subtotal</span>
-              <span>₹{sub.toLocaleString()}</span>
-            </div>
+  {/* Product List */}
+  {items.map((it) => (
+    <div className="rw" key={it.id}>
+      <span>
+        {it.name} × {it.quantity}
+      </span>
+      <span>
+        ₹{(it.price * it.quantity).toLocaleString()}
+      </span>
+    </div>
+  ))}
 
-            <div className="rw">
-              <span>Shipping</span>
-              <span className="fr">FREE</span>
-            </div>
+  <hr />
 
-            <hr />
+  <div className="rw tt">
+    <span>Subtotal</span>
+    <span>₹{sub.toLocaleString()}</span>
+  </div>
 
-            <div className="rw tt">
-              <span>Total</span>
-              <span>₹{sub.toLocaleString()}</span>
-            </div>
-
-            <button className="cb">Proceed to Checkout</button>
-            <p className="cn">Continue Shopping</p>
-          </div>
+  <Link to="/checkout" className="cn">Checkout products</Link>
+  <Link to="/" className="cn">Continue Shopping</Link>
+</div>
         </div>
       </div>
 
