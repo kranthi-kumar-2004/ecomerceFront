@@ -16,7 +16,7 @@ function SearchPage() {
 
     setLoading(true);
 
-    fetch(`http://localhost:8080/products/search?name=${query}`)
+    fetch(`https://ecomerceback-0mx1.onrender.com/products/search?name=${query}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
