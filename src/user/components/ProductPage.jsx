@@ -26,7 +26,7 @@ function ProductPage() {
       try {
         setLoading(true);
 
-        const res = await fetch(`http://localhost:8080/products/${id}`);
+        const res = await fetch(`https://ecomerceback-0mx1.onrender.com/products/${id}`);
         if (!res.ok) throw new Error("Failed to fetch product");
 
         const data = await res.json();
@@ -45,7 +45,7 @@ function ProductPage() {
       if (!token) return;
 
       try {
-        const res = await fetch("http://localhost:8080/wishlist", {
+        const res = await fetch("https://ecomerceback-0mx1.onrender.com/wishlist", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -79,8 +79,8 @@ function ProductPage() {
 
     try {
       const url = liked
-        ? `http://localhost:8080/wishlist/remove/${id}`
-        : `http://localhost:8080/wishlist/add/${id}`;
+        ? `https://ecomerceback-0mx1.onrender.com/wishlist/remove/${id}`
+        : `https://ecomerceback-0mx1.onrender.com/wishlist/add/${id}`;
 
       const method = liked ? "DELETE" : "POST";
 
@@ -119,7 +119,7 @@ function ProductPage() {
     try {
       setAdding(true);
 
-      const res = await fetch("http://localhost:8080/api/cart", {
+      const res = await fetch("https://ecomerceback-0mx1.onrender.com/api/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
