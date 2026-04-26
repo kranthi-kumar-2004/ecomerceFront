@@ -1,3 +1,4 @@
+
 .c {
   display: flex;
   justify-content: center;
@@ -13,24 +14,24 @@
 
 .ct {
   padding: 40px;
-  background: #f5f7fa;
+
   min-height: 100vh;
 }
 
 .ct h1 {
   margin-bottom: 30px;
-  background:none;
+  background: none;
 }
 
+/* Layout */
 .cc {
   display: flex;
   gap: 30px;
-  background:none;
+  background: none;
 }
 
 .ci {
   flex: 2;
-  background:none;
 }
 
 .cd {
@@ -40,7 +41,7 @@
   padding: 20px;
   border-radius: 12px;
   gap: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
 }
 
@@ -80,25 +81,36 @@
   border: 1px solid #ccc;
   background: white;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.qt button:hover {
+  background: #f0f0f0;
 }
 
 .dl {
   margin-left: 20px;
   cursor: pointer;
   color: red;
+  font-size: 18px;
 }
-
+.cc {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start; 
+}
 .sm {
   flex: 1;
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  height: fit-content;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
   position: sticky;
-  top: 80px;
+  top: 100px;   /* adjust as needed */
+  align-self: flex-start;
 }
+
 
 .sm h2 {
   margin-bottom: 20px;
@@ -108,10 +120,17 @@
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+  font-size: 14px;
+  gap: 10px;
 }
 
-.fr {
-  color: green;
+.rw span:first-child {
+  flex: 1;
+  color: #444;
+}
+
+.rw span:last-child {
+  font-weight: 500;
 }
 
 .tt {
@@ -119,23 +138,24 @@
   font-size: 18px;
 }
 
-.cb {
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background: #1e9bd7;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
 .cn {
+  display: block;
   text-align: center;
   margin-top: 15px;
-  color: #007bff;
-  cursor: pointer;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
+
+.cn:hover {
+  background: #0056b3;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .ct {
     padding: 15px;
@@ -208,7 +228,7 @@
     width: 100%;
     margin-top: 10px;
     padding: 20px;
-    width:430px;
+    max-height: none;
   }
 
   .sm h2 {
@@ -223,12 +243,8 @@
     font-size: 16px;
   }
 
-  .cb {
-    padding: 10px;
-    font-size: 14px;
-  }
-
   .cn {
     font-size: 14px;
+    padding: 10px;
   }
 }
