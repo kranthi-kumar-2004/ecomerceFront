@@ -1,0 +1,219 @@
+.profile-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.profile-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+/* ===== HEADER FIX ===== */
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LEFT SIDE (avatar + text) */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* PUSH BUTTON RIGHT */
+.edit-btn {
+  margin-left: auto;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* AVATAR */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email {
+  color: gray;
+}
+
+.badge {
+  background: #e0f0ff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.label {
+  color: gray;
+  font-size: 14px;
+}
+
+/* ===== ADDRESS ===== */
+.address-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.address-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-btn {
+  background: #5b4bff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.address-box {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.address-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit {
+  background: #eee;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.delete {
+  color: red;
+  background: none;
+  border: none;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+  .profile-container {
+    padding: 15px;
+  }
+
+  .profile-card,
+  .address-card {
+    padding: 20px;
+  }
+
+  .profile-title {
+    font-size: 26px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .profile-container {
+    padding: 10px;
+  }
+
+  .profile-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .profile-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-info {
+    flex-direction: column;
+  }
+
+  .edit-btn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .address-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .add-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .address-actions {
+    justify-content: space-between;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+
+  .profile-title {
+    font-size: 20px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .profile-card,
+  .address-card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .add-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .edit-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+}

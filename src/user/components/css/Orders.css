@@ -1,0 +1,144 @@
+/* ===== CONTAINER ===== */
+.orders-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+/* ===== TITLE ===== */
+.orders-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ===== CARD ===== */
+.order-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ===== HEADER ===== */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-id {
+  color: #777;
+  font-size: 13px;
+}
+
+.date {
+  color: #999;
+  font-size: 12px;
+}
+
+.order-right {
+  text-align: right;
+}
+
+.total {
+  color: #2874f0;
+  font-weight: 600;
+}
+
+/* ===== STATUS ===== */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status.pending,
+.status.processing {
+  background: #e0f0ff;
+  color: #2874f0;
+}
+
+.status.shipping {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.delivered {
+  background: #d4edda;
+  color: #28a745;
+}
+
+/* ===== BODY ===== */
+.order-body {
+  margin-top: 15px;
+}
+
+.order-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.order-item img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+/* ===== BUTTON ===== */
+.view-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #2874f0;
+  color: white;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #1f5edc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .order-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .order-right {
+    text-align: left;
+  }
+
+  .order-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .orders-container {
+    margin: 10px;
+  }
+
+  .order-card {
+    padding: 12px;
+  }
+
+  .order-item img {
+    width: 45px;
+    height: 45px;
+  }
+}

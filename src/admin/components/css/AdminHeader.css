@@ -1,0 +1,26 @@
+header{
+    display:flex;
+    height:40px;
+    z-index:1000;
+}
+.search{
+    display:flex;
+    margin-right:auto;
+}
+.notification{
+    font-size:25px;
+    color:white;
+    background:none;
+    cursor:pointer;
+}
+.menu_a{
+    background:none;
+    color:white;
+    top:5px;
+    padding-top:7px;
+    margin-right:25px;
+    margin-bottom:9px;
+    font-size:28px;
+    cursor:pointer;
+}
+

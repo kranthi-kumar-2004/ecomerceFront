@@ -1,0 +1,230 @@
+     
+.dash {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dash h2 {
+    margin-left: 63px;
+}
+
+     
+.display-content {
+    display: flex;
+    gap: 40px;
+    margin-left: 60px;
+    margin-right: 30px;
+}
+
+     
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 30%;
+    background: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.box h5 {
+    font-weight: normal;
+    color: gray;
+}
+
+.inbox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+     
+.icon-users {
+    color: purple;
+    font-size: 30px;
+}
+
+.icon-products {
+    color: green;
+    font-size: 30px;
+}
+
+.icon-orders {
+    color: blue;
+    font-size: 30px;
+}
+
+.icon-revenue {
+    color: rgb(200, 138, 3);
+    font-size: 35px;
+}
+
+     
+.RQ {
+    display: flex;
+    gap: 20px;
+    padding: 40px 60px;
+}
+
+     
+.Quick {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    background: white;
+}
+
+.Quick h4 {
+    margin-bottom: 10px;
+}
+
+.Quick a {
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    background: #e1e5f2;
+    color: black;
+    cursor: pointer;
+    padding: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.Quick a:hover {
+    background: #426eef;
+    color: white;
+}
+
+     
+.Recent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: white;
+}
+
+.Recent h4 {
+    margin-bottom: 10px;
+}
+
+     
+.recent-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-table th {
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+    color: #333;
+}
+
+.recent-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.recent-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+     
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+     
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.processing {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status.delivered {
+    background: #d4edda;
+    color: #155724;
+}
+
+     
+.Recent button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #e1e5f2;
+    cursor: pointer;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.Recent button:hover {
+    background: #426eef;
+    color: white;
+}
+
+     
+input {
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+     
+@media (max-width: 768px) {
+
+    .display-content {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
+    }
+
+    .dash h2 {
+        margin-left: 20px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .RQ {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .Recent,
+    .Quick {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .Quick a {
+        width: 100%;
+    }
+}

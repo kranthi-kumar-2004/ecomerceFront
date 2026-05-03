@@ -1,0 +1,248 @@
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.e {
+  font-size: 24px;
+  font-weight: 500;
+  color: #555;
+}
+
+.ct {
+  padding: 40px;
+
+  min-height: 100vh;
+}
+
+.ct h1 {
+  margin-bottom: 30px;
+  background: none;
+}
+
+     
+.cc {
+  display: flex;
+  gap: 30px;
+  background: none;
+}
+
+.ci {
+  flex: 2;
+}
+
+.cd {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+.qty-box{
+  background-color: none;
+}
+.img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.pd h3 {
+  margin: 0;
+}
+.disabled-btn {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.pd p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.ds {
+  font-size: 14px;
+}
+
+.pd h4 {
+  color: #007bff;
+}
+
+.qt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  width: 22%;
+  margin-left: auto;   /* pushes to right */
+}
+.qt button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.qt button:hover {
+  background: #f0f0f0;
+}
+
+.dl {
+  margin-left: 20px;
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+}
+.cc {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start; 
+}
+.sm {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  position: sticky;
+  top: 100px;        
+  align-self: flex-start;
+}
+
+
+.sm h2 {
+  margin-bottom: 20px;
+}
+
+.rw {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.rw span:first-child {
+  flex: 1;
+  color: #444;
+}
+
+.rw span:last-child {
+  font-weight: 500;
+}
+
+.tt {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cn {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 6px;
+  font-size: 14px;
+}
+x
+.discount-tag {
+  color: #22c55e;
+  margin-left: 8px;
+  font-weight: 600;
+}
+.cn:hover {
+  background: #0056b3;
+}
+@media (max-width: 768px) {
+  .ct {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+  }
+
+  .cc {
+    flex-direction: column;   /* stack children vertically */
+    gap: 20px;
+    width: 100%;              /* container spans full width */
+  }
+
+  .cd {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;              /* cart item full width */
+    box-sizing: border-box;
+  }
+
+  .img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  .pd { flex: 1; }
+  .pd h3 { font-size: 14px; }
+  .pd p { font-size: 12px; }
+  .pd h4 { font-size: 14px; }
+
+  .qt {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+  }
+
+  .qt button {
+    width: 28px;
+    height: 28px;
+  }
+  .ci{
+        width: 100%;
+  }
+  .dl { margin-left: 6px; }
+  .ds { display: none; }
+
+  .sm {
+    display: block;           /* override flex child behavior */
+    width: 100%;              /* full width */
+    margin-top: 10px;
+    position: static;         /* remove sticky on mobile */
+    box-sizing: border-box;   /* include padding in width */
+  }
+
+  .sm h2 { font-size: 18px; }
+  /* MOVE QTY BELOW DETAILS */
+.qt {
+  width: 40%;          /* take full row */
+  margin-left: 0;       /* ❌ remove push right */
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;  /* Qty left, delete right */
+  align-items: center;
+}
+.cd {
+  flex-direction: row;
+  flex-wrap: wrap;   /* 🔥 allows .qt to go to next line */
+}
+}

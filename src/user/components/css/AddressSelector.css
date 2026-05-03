@@ -1,0 +1,183 @@
+/* ===== WRAPPER ===== */
+.addr-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== CARD CONTAINER ===== */
+.addr-list {
+  margin-top: 10px;
+}
+
+/* ===== ADDRESS CARD ===== */
+.addr-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* hover */
+.addr-card:hover {
+  border-color: #1976d2;
+  background: #f5faff;
+  transform: translateY(-1px);
+}
+
+/* selected */
+.addr-card.active {
+  border: 2px solid #1976d2;
+  background: #eef6ff;
+  box-shadow: 0 3px 10px rgba(25,118,210,0.15);
+}
+
+/* ===== TOP ROW ===== */
+.addr-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+/* ===== BODY TEXT ===== */
+.addr-body {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ===== FOOTER ===== */
+.addr-footer {
+  font-size: 13px;
+  color: #444;
+  margin-top: 3px;
+}
+
+/* ===== EDIT BUTTON ===== */
+.edit-btn {
+  border: none;
+  background: transparent;
+  color: #1976d2;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: #e3f2fd;
+}
+
+/* ===== ADD BUTTON ===== */
+.add-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #125aa0;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* ===== MODAL BOX ===== */
+.modal-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== INPUT ===== */
+.modal-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.modal-box input:focus {
+  border-color: #1976d2;
+}
+
+/* ===== BUTTON GROUP ===== */
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* SAVE */
+.modal-actions button:first-child {
+  flex: 1;
+  background: #28a745;
+  color: white;
+}
+
+/* CANCEL */
+.modal-actions button:last-child {
+  flex: 1;
+  background: #ccc;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+
+  .addr-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .addr-top {
+    font-size: 14px;
+  }
+
+  .addr-body,
+  .addr-footer {
+    font-size: 12px;
+  }
+
+  .modal-box {
+    width: 95%;
+    padding: 15px;
+  }
+  .addr-list{
+    margin: 10px;
+  }
+  .add-btn{
+    margin:10px;
+    width: 93%;
+  }
+}

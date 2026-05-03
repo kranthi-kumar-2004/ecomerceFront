@@ -1,0 +1,82 @@
+   
+.orders-container {
+  padding: 20px;
+}
+
+   
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #020617;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+ 
+.orders-table thead {
+  background: #0f172a;
+}
+
+.orders-table th {
+  padding: 14px;
+  text-align: center;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+ 
+.orders-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+   
+.orders-table tbody tr:hover {
+  background: #0f172a;
+}
+
+   
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+   
+.status.Pending {
+  background: rgba(250, 204, 21, 0.1);
+  color: #facc15;
+}
+
+.status.Processing {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+
+.status.Shipping {
+  background: rgba(167, 139, 250, 0.1);
+  color: #a78bfa;
+}
+
+.status.Delivered {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+   
+.status-select {
+  background: #020617;
+  color: Green;
+  border: 1px solid #1e293b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+   
+.orders-table td,
+.orders-table th {
+  min-width: 120px;
+}

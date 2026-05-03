@@ -1,0 +1,224 @@
+/* ===== CONTAINER ===== */
+.ckx-container {
+  padding: 20px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== LAYOUT ===== */
+.ckx-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.ckx-left {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* RIGHT SIDE */
+.ckx-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  position: sticky;
+  top: 20px;
+}
+
+/* ===== CARD ===== */
+.ckx-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ITEMS ===== */
+.ckx-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ckx-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.ckx-item h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.ckx-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== QUANTITY ===== */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.qty-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== PAYMENT ===== */
+.ckx-card label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+/* ===== SUMMARY ===== */
+.ckx-summary {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* ===== BUTTON ===== */
+.ckx-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #1976d2;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.ckx-btn:hover {
+  background-color: #125aa0;
+}
+
+/* ========================= */
+/* ===== TABLET (1024px) ==== */
+/* ========================= */
+@media (max-width: 1024px) {
+  .ckx-layout {
+    gap: 15px;
+  }
+
+  .ckx-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ckx-right {
+    max-width: 300px;
+  }
+}
+
+/* ========================= */
+/* ===== MOBILE (768px) ===== */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .ckx-layout {
+    flex-direction: column;
+  }
+
+  .ckx-right {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .ckx-left {
+    width: 100%;
+  }
+
+  /* ✅ KEEP ROW (same as desktop) */
+  .ckx-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ckx-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ckx-item > div {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .ckx-item {
+    justify-content: space-between;   /* important */
+  }
+
+  .ckx-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ckx-item > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 10px;
+  }
+
+  .ckx-item h3 {
+    font-size: 13px;
+  }
+
+  .quantity {
+    font-size: 12px;
+  }
+
+  .qty-select {
+    padding: 3px 6px;
+    width: auto;   /* ❌ remove 30% */
+  }
+
+  .ckx-item p {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .ckx-left,
+  .ckx-right {
+    width: 100%;
+    min-width: 10%;
+  }
+}
